@@ -2,6 +2,15 @@
 
 TODO: Write a gem description
 
+## Usage of SompleCov
+
+SimpleCov requires adapter to work with gems.
+Add these lines in the begining of spec_helper.rb:
+
+    require 'simplecov'
+    require 'simplecov-gem-adapter'
+    SimpleCov.start 'gem'
+
 ## Installation
 
 Add this line to your application's Gemfile:
