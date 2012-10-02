@@ -13,7 +13,7 @@ module Calc
     end
 
     def plus()
-      
+      @arguments.inject(:+)
     end
 
     
