@@ -6,23 +6,31 @@ describe Calc do
 
   describe "get method" do
     it "should receive array as argument" do
-      argument = [1,2,3]
-      c.get(argument).should == argument
+      argument1 = [1,2,3]
+      c.get(argument1).should == argument1
+      argument2 = [4,5,6]
+      c.get(argument2).should == argument1 + argument2
     end
 
     it "should receive number as argument" do
-      argument = 1
-      c.get(argument).should == argument
+      argument1 = 1
+      c.get(argument1).should == [argument1]
+      argument2 = 2
+      c.get(argument2).should == [argument1, argument2]
     end
   end
 
   describe "plus method" do
     it "should summarize numbers for the array argument" do
-
+      argument = [1,2,3]
+      c.get(argument)
+      c.plus.should == 6
     end
 
     it "should summarize numbers for the number argument" do
-
+      argument = [1,2,3]
+      c.get(argument)
+      c.plus.should == 6
     end
   end
 
