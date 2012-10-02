@@ -1,13 +1,18 @@
 require 'spec_helper'
 
 describe Calc do
+
+  let(:c) { Calc::C.new }
+
   describe "get method" do
     it "should receive array as argument" do
-
+      argument = [1,2,3]
+      c.get(argument).should == argument
     end
 
     it "should receive number as argument" do
-
+      argument = 1
+      c.get(argument).should == argument
     end
   end
 

@@ -1,5 +1,11 @@
 require "calc/version"
 
 module Calc
-  # Your code goes here...
+
+  class C
+    def get(args)
+      @arguments = args
+    end
+
+  end
 end
