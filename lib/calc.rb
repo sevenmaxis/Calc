@@ -5,7 +5,7 @@ module Calc
   class C
 
     def initialize
-      @arguments = []
+      reset
     end
 
     def get(*args)
@@ -13,11 +13,21 @@ module Calc
     end
 
     def plus
-      @arguments.inject(:+)
+      result = @arguments.inject(0) { |init,r| init + r }
+      reset
+      result
     end
 
     def minus
-      -@arguments.inject(:+)
+      result = - @arguments.inject(0) { |init,r| init + r }
+      reset
+      result
+    end
+
+    private
+
+    def reset
+      @arguments = []
     end
 
   end
