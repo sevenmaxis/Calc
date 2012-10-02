@@ -12,10 +12,13 @@ module Calc
       @arguments += args.flatten
     end
 
-    def plus()
+    def plus
       @arguments.inject(:+)
     end
 
-    
+    def minus
+      -@arguments.inject(:+)
+    end
+
   end
 end
