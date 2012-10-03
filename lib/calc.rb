@@ -13,15 +13,13 @@ module Calc
     end
 
     def plus
-      result = @arguments.inject(0) { |init,r| init + r }
+      result = @arguments.inject(0, :+)
       reset
       result
     end
 
     def minus
-      result = - @arguments.inject(0) { |init,r| init + r }
-      reset
-      result
+      -plus
     end
 
     private

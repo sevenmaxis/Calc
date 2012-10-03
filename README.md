@@ -1,6 +1,6 @@
 # Calc
 
-TODO: Write a gem description
+training project for RubyGarage
 
 ## Usage of SompleCov
 
